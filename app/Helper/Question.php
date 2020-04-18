@@ -61,7 +61,7 @@ class Question
         $score=0;
          foreach ($questions as $key => $question) {
             $total+=1;
-            if ($question->correctanswer==$request[$question->id]) {
+            if (isset($request[$question->id]) && $question->correctanswer==$request[$question->id]) {
                $score+=1;
             }
          }

@@ -15,10 +15,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     /**
      * Show the application dashboard.
@@ -33,7 +33,14 @@ class HomeController extends Controller
     {
         $questions=question::where('user_id',$user)->get();
         $user=User::findorfail($user);
-        return view('question.publicquestion',compact(['questions','user']));
+        $answer=answer::where('author_id',$user->id)->where('friend_id',auth()->user()->id)->first();
+        if(!$answer){
+            return view('question.publicquestion',compact(['questions','user']));
+        }
+        else
+        {
+            return abort('404');
+        }
     }
     public function answer(Request $request)
     {
