@@ -39,7 +39,7 @@ class HomeController extends Controller
         }
         else
         {
-            return abort('404');
+            return view('question.result',compact('answer'));
         }
     }
     public function answer(Request $request)
@@ -50,7 +50,7 @@ class HomeController extends Controller
         $answer->friend_id=auth()->user()->id;
         $answer->result=GlobalQuestion::CorrectAnswer($questions,$request->except('_token'));
         $answer->save();
-        return back();
+        return view('question.result',compact('answer'));
     }
     public function answers()
     {

@@ -21,7 +21,7 @@
              @endforelse
              @if($questions->count()!=0)
              <input type="hidden" name="user_id" value="{{$question->user_id}}">
-             <div class="row mt-4">
+             <div class="row mt-2 mb-5">
                  <div class="col-12 text-center mt-4">
                      <input type="submit" class="btn btn-outline-primary brdrd " value="@lang('home.save')">
                  </div>

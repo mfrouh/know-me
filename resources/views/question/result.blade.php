@@ -4,9 +4,8 @@
 @endsection
 @section('content')
 <div class="container">
-  <div class="row mt-3">
-    @forelse ($answers as $answer)
-       <div class="col-3 mt-5">
+  <div class="row justify-content-center">
+       <div class="col-6 mt-5">
         <div class="card text-center ">
           <div class="card-body ">
            <img  src="{{$answer->friend->image}}" class="img-writer shadow  mb-5" style="right:120px;top:-62px" alt="">
@@ -15,11 +14,6 @@
           </div>
         </div>
        </div>
-    @empty
-        <div class="col-12 text-center mt-5">
-           <p class=""> @lang('home.notfoundanswer')</p>
-        </div>
-    @endforelse
   </div>
 </div>
 @endsection
