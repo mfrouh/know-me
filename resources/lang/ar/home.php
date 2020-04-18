@@ -38,6 +38,9 @@ return
     'answers'=>'الاجابات',
     'notfoundquestion'=>'لا يوجد اسئلة',
     'notfoundanswer'=>'لا يوجد اجابات',
+    'createquestion'=>'انشاء سؤال',
+    'editquestion'=>'تعديل سؤال',
+
 
 
 ];

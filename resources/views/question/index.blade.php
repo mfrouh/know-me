@@ -4,6 +4,8 @@
 @endsection
 @section('content')
 <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8 mt-5">
     @forelse ($questions as $k=> $question)
       <x-question :question="$question" :k="$k"/>
       <hr>
@@ -14,5 +16,7 @@
         </div>
     </div>
     @endforelse
+    </div>
+  </div>
 </div>
 @endsection

@@ -21,7 +21,7 @@
                             <a class="nav-link   ml-1 mr-1 smaller" href="/answer">@lang('home.answers')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link   ml-1 mr-1 smaller" href="/question/create">@lang('home.create')</a>
+                            <a class="nav-link   ml-1 mr-1 smaller" href="/question/create">@lang('home.createquestion')</a>
                         </li>
 
                     </ul>

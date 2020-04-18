@@ -32,4 +32,6 @@ return
     'logout'=>'Logout',
     'notfoundquestion'=>'Not Found Question',
     'notfoundanswer'=>'Not Found Answer',
+    'createquestion'=>'Create Question',
+    'editquestion'=>'Edit Question',
 ];

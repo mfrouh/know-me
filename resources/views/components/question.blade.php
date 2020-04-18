@@ -2,8 +2,8 @@
     <div class="card-header bg-white text-center">
         <div class="row p-1">
             <div class="col-1"><a  class="btn btn-success brdrd btn-sm">{{$k+1}}</a> </div>
-            <div class="col-10">{{ $question->question}}</div>
-            <div class="col-1">
+            <div class="col-9">{{ $question->question}}</div>
+            <div class="col-2">
                <a href="/question/{{$question->id}}/edit" class="@lang('home.right') btn btn-primary ml-1 mr-1 brdrd btn-sm"><i class="fas fa-edit    "></i></a>
                <a href="#" class="@lang('home.right') btn btn-danger brdrd btn-sm"onclick="event.preventDefault();
                document.getElementById('delete-question-{{$question->id}}').submit();">
