@@ -7,20 +7,18 @@
   <div class="row">
     @forelse ($answers as $answer)
        <div class="col-3 mt-5">
-        <div class="card text-center p-">
+        <div class="card text-center ">
           <div class="card-body ">
-           <img  src="{{$answer->friend->image}}" class="img-writer shadow mt- mb-5" style="right:120px;top:-62px" alt="">
+           <img  src="{{$answer->friend->image}}" class="img-writer shadow  mb-5" style="right:120px;top:-62px" alt="">
            <a class="alink  mt-3" >{{$answer->friend->name}}</a><br>
            <a class="alink  mt-3" >{{$answer->result}}%</a>
           </div>
         </div>
        </div>
     @empty
-    <div class="row">
-        <div class="col-12 text-center">
-            @lang('home.notfoundanswer')
+        <div class="col-12 text-center mt-5">
+           <p class=""> @lang('home.notfoundanswer')</p>
         </div>
-    </div>
     @endforelse
   </div>
 </div>
